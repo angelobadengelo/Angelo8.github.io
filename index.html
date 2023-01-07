@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>For Par | Online FPHS Merch</title>
-    <link rel="stylesheet" href="sty.css">
+    <link rel="stylesheet" href="st.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -16,7 +16,7 @@
         <img src="fphs.png" width="50px" length="50px">
     </div>
     <nav>
-      <ul>
+      <ul id="MenuItems">
         <li><a href="">Home</a></li>
         <li><a href="">Products</a></li>
         <li><a href="">About</a></li>
@@ -24,7 +24,7 @@
         <li><a href="">Account</a></li>
     </nav>
         <img src="shoppingcart.png" width="30px" length="30px">
-        <img src="menu.png" class="menu-icon">
+        <img src="menu.png" class="menu-icon" onclick="menutoggle()">
     </div>
     <div class="row">
       <div class="col-2">
@@ -339,6 +339,22 @@
         <p class="Copyright">Copyright 2023 - Forest Park Merch</p>
       </div>
     </div>
-
+<!-------js for toggle menu------->
+  <script>
+    var MenuItems = document.getElementById("MenuItems")
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+      if(MenuItems.style.maxHeight == "0px")
+        {
+          MenuItems.style.maxHeight = "200px"
+        }
+      else
+        {
+          MenuItems.style.maxHeight = "0px"
+        }
+    }
+  </script>
 </body>
 </html>
